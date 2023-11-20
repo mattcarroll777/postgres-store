@@ -6,7 +6,7 @@ import { PostProps } from '../../components/Post';
 import prisma from '../../lib/prisma';
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const post = await prisma.shirts.findUnique({
+  const post = await prisma.sweatShirts.findUnique({
     where: {
       id: Number(params?.id),
     },
