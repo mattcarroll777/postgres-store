@@ -67,12 +67,12 @@ const Blog: React.FC<Props> = (props) => {
         .list {
           display: flex;
           overflow-x: auto;
-          height: 400px;
+          height: 500px;
           white-space: nonwrap;
         }
         .post {
           flex: none;
-          width: 200px;
+          width: 300px;
           margin-right: 10px;
           background: white;
           transition: box-shadow 0.1s ease-in;

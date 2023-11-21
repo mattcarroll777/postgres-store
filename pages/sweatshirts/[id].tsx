@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import Layout from '../../components/Layout';
 import { PostProps } from '../../components/Post';
 import prisma from '../../lib/prisma';
+import Image from 'next/image';
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const post = await prisma.sweatShirts.findUnique({
@@ -20,8 +21,8 @@ const Post: React.FC<PostProps> = (props) => {
   return (
     <Layout>
       <div>
+        <Image priority src={props.imgUrl} height={200} width={200} />
         <h2>{props.name}</h2>
-        <p>{props.imgUrl}</p>
         <h3>{props.price}</h3>
       </div>
       <style jsx>{`
