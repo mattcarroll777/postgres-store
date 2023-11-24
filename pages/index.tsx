@@ -67,7 +67,7 @@ const Blog: React.FC<Props> = (props) => {
         .list {
           display: flex;
           overflow-x: auto;
-          height: 500px;
+          height: 100%;
           white-space: nonwrap;
         }
         .post {

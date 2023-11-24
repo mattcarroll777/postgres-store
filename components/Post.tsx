@@ -12,16 +12,21 @@ export type PostProps = {
 
 const Post: React.FC<{ post: PostProps }> = ({ post }) => {
   return (
-    <div>
-      <div>
-        <Image priority src={post.imgUrl} height={200} width={200} />
+    <div className="mainCont">
+      <div className="dataCont">
+        <div>
+          <Image priority src={post.imgUrl} height={200} width={200} />
+        </div>
+        <h2>{post.name}</h2>
+        <small>$ {post.price}</small>
       </div>
-      <h2>{post.name}</h2>
-      <small>$ {post.price}</small>
       <style jsx>{`
-        div {
+        .mainCont {
           color: inherit;
           padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
       `}</style>
     </div>
